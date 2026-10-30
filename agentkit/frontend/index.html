@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentKit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app">
+  <div id="sidebar"><div class="sb-head"><div class="logo"><div class="logo-icon">AK</div><span class="logo-name">AgentKit</span></div></div></div>
+  <div id="main">
+    <div id="topbar">
+      <span class="tb-title" id="tbTitle">AgentKit</span>
+      <div class="tb-right">
+        <select id="modelSel" class="ctrl">
+          <option>Claude Sonnet 4</option>
+          <option>Claude Opus 4</option>
+          <option>Claude Haiku 4</option>
+          <option>Qwen3-72B（本地）</option>
+        </select>
+        <button id="uploadBtn" class="ctrl" type="button">上传文件</button>
+        <input id="fileInput" type="file" multiple hidden>
+      </div>
+    </div>
+    <div id="chatView">
+      <div id="welcome">
+        <div class="wl-hi">下午好，张工 👋</div>
+        <div class="wl-sub">选择任务开始，或直接描述你的需求</div>
+      </div>
+      <div id="msglist" class="hidden"></div>
+      <div id="inp-area">
+        <div id="fileChips" class="hidden"></div>
+        <textarea id="ta" placeholder="描述任务，或上传文件开始分析…" rows="1"></textarea>
+        <button class="send-btn" id="sendBtn">发送</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
